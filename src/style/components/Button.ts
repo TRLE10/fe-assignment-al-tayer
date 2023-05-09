@@ -32,13 +32,22 @@ const Button = {
   variants: {
     primary: {
       bg: 'primary.500',
-      backgroundColor: 'primary.500',
       color: 'white',
       _hover: {
         bg: 'primary.300',
-        backgroundColor: 'primary.300',
         _disabled: {
           backgroundColor: 'primary.500',
+        },
+      },
+    },
+    secondary: {
+      bg: 'neutrals.100',
+      color: 'primary.500',
+      minW: 'fit-content',
+      _hover: {
+        bg: 'neutrals.50',
+        _disabled: {
+          backgroundColor: 'neutrals.200',
         },
       },
     },

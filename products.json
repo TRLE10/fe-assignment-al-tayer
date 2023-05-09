@@ -1,0 +1,179 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "asd",
+      "description": "Lorem ipsum",
+      "colors": ["black", "red", "purple"],
+      "img": "asdasd",
+      "price": { "EUR": 27, "USD": 30, "AED": 100 },
+      "size": ["M", "L", "XL"]
+    },
+    {
+      "id": 2,
+      "name": "eeeeddd",
+      "description": "Lorem ipsum",
+      "colors": ["black", "red", "orange"],
+      "img": "asdasd",
+      "price": { "EUR": 42, "USD": 46, "AED": 105 },
+      "size": ["M", "L", "XL"]
+    },
+    {
+      "id": 3,
+      "name": "ejhgyhjhgjghj",
+      "description": "Lorem ipsum",
+      "colors": ["black", "grey", "purple"],
+      "img": "asdasd",
+      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "size": ["M", "L", "XXL"]
+    },
+    {
+      "id": 4,
+      "name": "ejhgyhjhgjghj",
+      "description": "Lorem ipsum",
+      "colors": ["black", "grey", "purple"],
+      "img": "asdasd",
+      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "size": ["M", "L", "XXL"]
+    },
+    {
+      "id": 5,
+      "name": "ejhgyhjhgjghj",
+      "description": "Lorem ipsum",
+      "colors": ["black", "grey", "purple"],
+      "img": "asdasd",
+      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "size": ["M", "L", "XXL"]
+    },
+    {
+      "id": 6,
+      "name": "ejhgyhjhgjghj",
+      "description": "Lorem ipsum",
+      "colors": ["black", "grey", "purple"],
+      "img": "asdasd",
+      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "size": ["M", "L", "XXL"]
+    },
+    {
+      "id": 7,
+      "name": "ejhgyhjhgjghj",
+      "description": "Lorem ipsum",
+      "colors": ["black", "grey", "purple"],
+      "img": "asdasd",
+      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "size": ["M", "L", "XXL"]
+    },
+    {
+      "id": 8,
+      "name": "ejhgyhjhgjghj",
+      "description": "Lorem ipsum",
+      "colors": ["black", "grey", "purple"],
+      "img": "asdasd",
+      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "size": ["M", "L", "XXL"]
+    },
+    {
+      "id": 9,
+      "name": "ejhgyhjhgjghj",
+      "description": "Lorem ipsum",
+      "colors": ["black", "grey", "purple"],
+      "img": "asdasd",
+      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "size": ["M", "L", "XXL"]
+    },
+    {
+      "id": 10,
+      "name": "ejhgyhjhgjghj",
+      "description": "Lorem ipsum",
+      "colors": ["black", "grey", "purple"],
+      "img": "asdasd",
+      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "size": ["M", "L", "XXL"]
+    },
+    {
+      "id": 11,
+      "name": "ejhgyhjhgjghj",
+      "description": "Lorem ipsum",
+      "colors": ["black", "grey", "purple"],
+      "img": "asdasd",
+      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "size": ["M", "L", "XXL"]
+    },
+    {
+      "id": 12,
+      "name": "ejhgyhjhgjghj",
+      "description": "Lorem ipsum",
+      "colors": ["black", "grey", "purple"],
+      "img": "asdasd",
+      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "size": ["M", "L", "XXL"]
+    },
+    {
+      "id": 13,
+      "name": "ejhgyhjhgjghj",
+      "description": "Lorem ipsum",
+      "colors": ["black", "grey", "purple"],
+      "img": "asdasd",
+      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "size": ["M", "L", "XXL"]
+    },
+    {
+      "id": 14,
+      "name": "ejhgyhjhgjghj",
+      "description": "Lorem ipsum",
+      "colors": ["black", "grey", "purple"],
+      "img": "asdasd",
+      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "size": ["M", "L", "XXL"]
+    },
+    {
+      "id": 15,
+      "name": "ejhgyhjhgjghj",
+      "description": "Lorem ipsum",
+      "colors": ["black", "grey", "purple"],
+      "img": "asdasd",
+      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "size": ["M", "L", "XXL"]
+    },
+    {
+      "id": 16,
+      "name": "ejhgyhjhgjghj",
+      "description": "Lorem ipsum",
+      "colors": ["black", "grey", "purple"],
+      "img": "asdasd",
+      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "size": ["M", "L", "XXL"]
+    },
+    {
+      "id": 17,
+      "name": "ejhgyhjhgjghj",
+      "description": "Lorem ipsum",
+      "colors": ["black", "grey", "purple"],
+      "img": "asdasd",
+      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "size": ["M", "L", "XXL"]
+    },
+    {
+      "id": 18,
+      "name": "ejhgyhjhgjghj",
+      "description": "Lorem ipsum",
+      "colors": ["black", "grey", "purple"],
+      "img": "asdasd",
+      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "size": ["M", "L", "XXL"]
+    }
+  ],
+  "pagination": {
+    "total": 3,
+    "per_page": 10,
+    "total_pages": 2
+  },
+  "filters": {
+    "colors": ["red", "blue", "black", "grey", "orange", "purple"],
+    "price": {
+      "min": { "EUR": 0, "USD": 0, "AED": 0 },
+      "max": { "EUR": 500, "USD": 550, "AED": 600 }
+    },
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"]
+  }
+}
