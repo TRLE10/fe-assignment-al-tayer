@@ -30,7 +30,7 @@ const CheckboxFilter = ({ onChange, filters }: SizeFilterProps) => {
       {filters.map((filter) => {
         return (
           <Center key={filter} flexDir={'column'} mx={4} gap={1}>
-            <Checkbox name={filter} onChange={handleChange} />
+            <Checkbox name={filter} onChange={handleChange} aria-label={filter} />
             <Text>{filter}</Text>
           </Center>
         );
