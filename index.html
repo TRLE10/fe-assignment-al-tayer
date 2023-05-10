@@ -4,9 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FE Assignment</title>
+    <style>
+      #offline-message {
+          display: none;
+          background-color: #784a4a;
+          color: #f9f9f9;
+          padding: 1rem;
+          text-align: center;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <div id="offline-message">You are currently offline. Some features may not be available.</div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
