@@ -1,10 +1,12 @@
-import { Center, Text } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
+import Router from './routes/Router';
+import theme from './style/theme';
 
 function App() {
   return (
-    <Center>
-      <Text>{'Initial setup'}</Text>
-    </Center>
+    <ChakraProvider theme={theme}>
+      <Router />
+    </ChakraProvider>
   );
 }
 
