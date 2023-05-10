@@ -1,4 +1,4 @@
-const HOME = '/home';
+const HOME = '/';
 
 export default {
   HOME,
