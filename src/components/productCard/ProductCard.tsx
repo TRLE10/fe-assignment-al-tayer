@@ -15,13 +15,10 @@ const ProductCard = ({ title, description, imgSrc }: ProductCardProps) => {
   return (
     <Flex {...styles.wrapper}>
       <Center flex={1}>
-        <Image src={imgSrc} />
+        <Image src={imgSrc} boxSize={{ lg: '250px', md: '160px', sm: '120px' }} aspectRatio={'inherit'} />
       </Center>
       <Flex {...styles.infoWrapper}>
-        <Text
-          textStyle={['Heading/Mobile/SemiBold', 'Heading/Tablet/SemiBold', 'Heading/Desktop/SemiBold']}
-          textAlign={'center'}
-        >
+        <Text textStyle={['Heading/Mobile/SemiBold', 'Heading/Tablet/SemiBold', 'Heading/Desktop/SemiBold']}>
           {title}
         </Text>
         <Text textStyle={['Large/Mobile/Regular', 'Large/Tablet/Regular', 'Large/Desktop/Regular']}>{description}</Text>

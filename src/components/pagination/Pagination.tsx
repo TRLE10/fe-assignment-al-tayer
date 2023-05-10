@@ -13,21 +13,25 @@ const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) 
   }
 
   return (
-    <Flex m={2} justifyContent={'center'}>
-      <Box>
-        <Button onClick={() => onPageChange(currentPage - 1)} isDisabled={currentPage === 1} size={'sm'}>
-          Previous
-        </Button>
-        {pageNumbers.map((number) => (
-          <Button key={number} onClick={() => onPageChange(number)} size={'sm'} mx={2} variant={'secondary'}>
-            {number}
-          </Button>
-        ))}
-        <Button onClick={() => onPageChange(currentPage + 1)} isDisabled={currentPage === totalPages} size={'sm'}>
-          Next
-        </Button>
-      </Box>
-    </Flex>
+    <>
+      {totalPages > 1 && (
+        <Flex m={2} justifyContent={'center'}>
+          <Box>
+            <Button onClick={() => onPageChange(currentPage - 1)} isDisabled={currentPage === 1} size={'sm'}>
+              Previous
+            </Button>
+            {pageNumbers.map((number) => (
+              <Button key={number} onClick={() => onPageChange(number)} size={'sm'} mx={2} variant={'secondary'}>
+                {number}
+              </Button>
+            ))}
+            <Button onClick={() => onPageChange(currentPage + 1)} isDisabled={currentPage === totalPages} size={'sm'}>
+              Next
+            </Button>
+          </Box>
+        </Flex>
+      )}
+    </>
   );
 };
 

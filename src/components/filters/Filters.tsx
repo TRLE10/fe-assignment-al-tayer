@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { ProductType, ProductsType } from 'types/products';
 import CheckboxFilter from './checkboxFilter/CheckboxFilter';
 import SliderFilter from './sliderFilter/SliderFilter';
+import styles from './styles';
 
 type FiltersProps = {
   products: ProductsType;
@@ -10,10 +11,9 @@ type FiltersProps = {
 };
 
 const Filters = ({ products, onChange }: FiltersProps) => {
-  const [selectedColors, setSelectedColors] = useState<ProductType[]>([]);
-  const [selectedSizes, setSelectedSizes] = useState<ProductType[]>([]);
-  const [selectedPrice, setSelectedPrice] = useState<ProductType[]>([]);
-  const [filteredProducts, setFilteredProducts] = useState<ProductType[]>([]);
+  const [selectedColors, setSelectedColors] = useState<string[]>([]);
+  const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
+  const [selectedPrice, setSelectedPrice] = useState<number[]>([]);
   const {
     data,
     filters: { price, sizes, colors },
@@ -22,63 +22,48 @@ const Filters = ({ products, onChange }: FiltersProps) => {
   const max = price.max['EUR'];
 
   useEffect(() => {
-    if (!selectedColors.length && !selectedSizes.length) {
-      setFilteredProducts(data);
-      onChange(filteredProducts);
-      return;
-    }
-    const allFilteredProducts = selectedColors.concat(selectedSizes).concat(selectedPrice);
-    setFilteredProducts(allFilteredProducts.filter((item, index) => allFilteredProducts.indexOf(item) === index));
+    const filteredProducts = data.filter((product) => {
+      const matchedSizes = selectedSizes.length === 0 || selectedSizes.some((size) => product.size.includes(size));
+      const matchedColors =
+        selectedColors.length === 0 || selectedColors.some((color) => product.colors.includes(color));
+      const matchedPrices =
+        selectedPrice.length === 0 ||
+        (product.price['EUR'] >= selectedPrice[0] && product.price['EUR'] <= selectedPrice[1]);
+
+      return matchedSizes && matchedColors && matchedPrices;
+    });
     onChange(filteredProducts);
-  }, [selectedColors, selectedPrice, selectedSizes, onChange, data, filteredProducts]);
+  }, [selectedColors, selectedPrice, selectedSizes, data, onChange]);
 
-  const handleChangeSizes = useCallback(
-    (selectedSizes: string[]) => {
-      for (const selectedSize of selectedSizes) {
-        const asd = data.filter((product) => product.size.includes(selectedSize));
-        setSelectedSizes((prev) => prev.concat(asd));
-      }
-    },
-    [data]
-  );
+  const handleChangeSizes = useCallback((selectedSizes: string[]) => {
+    setSelectedSizes(selectedSizes);
+  }, []);
 
-  const handleChangeColors = useCallback(
-    (selectedColors: string[]) => {
-      for (const selectedColor of selectedColors) {
-        const asd = data.filter((product) => product.colors.includes(selectedColor));
-        setSelectedColors((prev) => prev.concat(asd));
-      }
-    },
-    [data]
-  );
+  const handleChangeColors = useCallback((selecedColors: string[]) => {
+    setSelectedColors(selecedColors);
+  }, []);
 
-  const handleChangePrice = useCallback(
-    (values: number[]) => {
-      const filteredByPrice = data.filter((product) => {
-        return product.price['EUR'] >= values[0] && product.price['EUR'] <= values[1];
-      });
-      setSelectedPrice(filteredByPrice);
-    },
-    [data]
-  );
+  const handleChangePrice = useCallback((selectedPrice: number[]) => {
+    setSelectedPrice(selectedPrice);
+  }, []);
 
   return (
-    <Flex flexDir={'column'} gap={4} p={4}>
-      <Text textAlign={'center'}>{'Filters'}</Text>
+    <Flex {...styles.wrapper}>
+      <Text {...styles.heading}>{'Filters'}</Text>
       {sizes && (
-        <Flex flexDir={'column'} gap={2}>
+        <Flex {...styles.singleFilterWrapper}>
           <Text>{'Sizes'}</Text>
           <CheckboxFilter filters={sizes} onChange={handleChangeSizes} />
         </Flex>
       )}
       {colors && (
-        <Flex flexDir={'column'} gap={2}>
+        <Flex {...styles.singleFilterWrapper}>
           <Text>{'Colors'}</Text>
           <CheckboxFilter filters={colors} onChange={handleChangeColors} />
         </Flex>
       )}
       {price && (
-        <Flex flexDir={'column'} gap={2}>
+        <Flex {...styles.singleFilterWrapper}>
           <Text>{'Price'}</Text>
           <SliderFilter min={min} max={max} onChange={handleChangePrice} />
         </Flex>

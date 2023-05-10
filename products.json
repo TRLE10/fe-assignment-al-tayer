@@ -5,7 +5,7 @@
       "name": "asd",
       "description": "Lorem ipsum",
       "colors": ["black", "red", "purple"],
-      "img": "asdasd",
+      "img": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dCUyMHNoaXJ0fGVufDB8fDB8fA%3D%3D&w=1000&q=80",
       "price": { "EUR": 27, "USD": 30, "AED": 100 },
       "size": ["M", "L", "XL"]
     },
@@ -33,7 +33,7 @@
       "description": "Lorem ipsum",
       "colors": ["black", "grey", "purple"],
       "img": "asdasd",
-      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "price": { "EUR": 146, "USD": 60, "AED": 120 },
       "size": ["M", "L", "XXL"]
     },
     {
@@ -42,7 +42,7 @@
       "description": "Lorem ipsum",
       "colors": ["black", "grey", "purple"],
       "img": "asdasd",
-      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "price": { "EUR": 274, "USD": 60, "AED": 120 },
       "size": ["M", "L", "XXL"]
     },
     {
@@ -51,7 +51,7 @@
       "description": "Lorem ipsum",
       "colors": ["black", "grey", "purple"],
       "img": "asdasd",
-      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "price": { "EUR": 24, "USD": 60, "AED": 120 },
       "size": ["M", "L", "XXL"]
     },
     {
@@ -60,7 +60,7 @@
       "description": "Lorem ipsum",
       "colors": ["black", "grey", "purple"],
       "img": "asdasd",
-      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "price": { "EUR": 43, "USD": 60, "AED": 120 },
       "size": ["M", "L", "XXL"]
     },
     {
@@ -69,7 +69,7 @@
       "description": "Lorem ipsum",
       "colors": ["black", "grey", "purple"],
       "img": "asdasd",
-      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "price": { "EUR": 89, "USD": 60, "AED": 120 },
       "size": ["M", "L", "XXL"]
     },
     {
@@ -78,7 +78,7 @@
       "description": "Lorem ipsum",
       "colors": ["black", "grey", "purple"],
       "img": "asdasd",
-      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "price": { "EUR": 115, "USD": 60, "AED": 120 },
       "size": ["M", "L", "XXL"]
     },
     {
@@ -87,7 +87,7 @@
       "description": "Lorem ipsum",
       "colors": ["black", "grey", "purple"],
       "img": "asdasd",
-      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "price": { "EUR": 125, "USD": 60, "AED": 120 },
       "size": ["M", "L", "XXL"]
     },
     {
@@ -96,7 +96,7 @@
       "description": "Lorem ipsum",
       "colors": ["black", "grey", "purple"],
       "img": "asdasd",
-      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "price": { "EUR": 64, "USD": 60, "AED": 120 },
       "size": ["M", "L", "XXL"]
     },
     {
@@ -105,7 +105,7 @@
       "description": "Lorem ipsum",
       "colors": ["black", "grey", "purple"],
       "img": "asdasd",
-      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "price": { "EUR": 174, "USD": 60, "AED": 120 },
       "size": ["M", "L", "XXL"]
     },
     {
@@ -114,7 +114,7 @@
       "description": "Lorem ipsum",
       "colors": ["black", "grey", "purple"],
       "img": "asdasd",
-      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "price": { "EUR": 423, "USD": 60, "AED": 120 },
       "size": ["M", "L", "XXL"]
     },
     {
@@ -123,7 +123,7 @@
       "description": "Lorem ipsum",
       "colors": ["black", "grey", "purple"],
       "img": "asdasd",
-      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "price": { "EUR": 178, "USD": 60, "AED": 120 },
       "size": ["M", "L", "XXL"]
     },
     {
@@ -132,7 +132,7 @@
       "description": "Lorem ipsum",
       "colors": ["black", "grey", "purple"],
       "img": "asdasd",
-      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "price": { "EUR": 220, "USD": 60, "AED": 120 },
       "size": ["M", "L", "XXL"]
     },
     {
@@ -141,7 +141,7 @@
       "description": "Lorem ipsum",
       "colors": ["black", "grey", "purple"],
       "img": "asdasd",
-      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "price": { "EUR": 78, "USD": 60, "AED": 120 },
       "size": ["M", "L", "XXL"]
     },
     {
@@ -150,7 +150,7 @@
       "description": "Lorem ipsum",
       "colors": ["black", "grey", "purple"],
       "img": "asdasd",
-      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "price": { "EUR": 92, "USD": 60, "AED": 120 },
       "size": ["M", "L", "XXL"]
     },
     {
@@ -159,12 +159,12 @@
       "description": "Lorem ipsum",
       "colors": ["black", "grey", "purple"],
       "img": "asdasd",
-      "price": { "EUR": 52, "USD": 60, "AED": 120 },
+      "price": { "EUR": 145, "USD": 60, "AED": 120 },
       "size": ["M", "L", "XXL"]
     }
   ],
   "pagination": {
-    "total": 3,
+    "total": 18,
     "per_page": 10,
     "total_pages": 2
   },

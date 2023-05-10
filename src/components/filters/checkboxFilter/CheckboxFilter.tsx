@@ -11,7 +11,7 @@ const CheckboxFilter = ({ onChange, filters }: SizeFilterProps) => {
 
   useEffect(() => {
     onChange(selectedFilters);
-  }, [selectedFilters.length]);
+  }, [selectedFilters, onChange]);
 
   const handleChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     const {

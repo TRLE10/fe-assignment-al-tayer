@@ -2,27 +2,26 @@ const Button = {
   baseStyle: {
     borderRadius: 'lg',
     fontWeight: 600,
-    mx: 'auto',
     type: 'button',
   },
   sizes: {
     sm: {
       minW: 24,
-      h: 9,
+      h: 7,
       px: 7,
       py: 3,
       fontSize: 'xs',
     },
     md: {
       minW: 32,
-      h: 10,
+      h: 8,
       px: 7,
       py: 3,
       fontSize: 'sm',
     },
     lg: {
       minW: 36,
-      h: 12,
+      h: 10,
       px: 7,
       py: 3,
       fontSize: 'md',
