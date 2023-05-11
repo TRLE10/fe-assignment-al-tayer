@@ -1,4 +1,5 @@
-import { Flex, Text } from '@chakra-ui/react';
+import { Flex, SkeletonCircle, Text } from '@chakra-ui/react';
+import { useProducts } from 'hooks';
 import { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ProductType, ProductsType } from 'types/products';
@@ -7,25 +8,22 @@ import SliderFilter from './sliderFilter/SliderFilter';
 import styles from './styles';
 
 type FiltersProps = {
-  products: ProductsType;
+  products?: ProductsType;
   onChange: (filteredProducts: ProductType[]) => void;
   currency: string;
 };
 
 const Filters = ({ products, onChange, currency }: FiltersProps) => {
   const { t } = useTranslation();
+  const { isLoading } = useProducts();
   const [selectedColors, setSelectedColors] = useState<string[]>([]);
   const [selectedSizes, setSelectedSizes] = useState<string[]>([]);
   const [selectedPrice, setSelectedPrice] = useState<number[]>([]);
-  const {
-    data,
-    filters: { price, sizes, colors },
-  } = products;
-  const min = price.min[currency];
-  const max = price.max[currency];
+  const min = products?.filters?.price?.min[currency];
+  const max = products?.filters?.price?.max[currency];
 
   useEffect(() => {
-    const filteredProducts = data.filter((product) => {
+    const filteredProducts = products?.data?.filter((product) => {
       const matchedSizes = selectedSizes.length === 0 || selectedSizes.some((size) => product.size.includes(size));
       const matchedColors =
         selectedColors.length === 0 || selectedColors.some((color) => product.colors.includes(color));
@@ -35,8 +33,8 @@ const Filters = ({ products, onChange, currency }: FiltersProps) => {
 
       return matchedSizes && matchedColors && matchedPrices;
     });
-    onChange(filteredProducts);
-  }, [selectedColors, selectedPrice, selectedSizes, data, onChange, currency]);
+    filteredProducts && onChange(filteredProducts);
+  }, [selectedColors, selectedPrice, selectedSizes, onChange, currency, products?.data]);
 
   const handleChangeSizes = useCallback((selectedSizes: string[]) => {
     setSelectedSizes(selectedSizes);
@@ -52,24 +50,34 @@ const Filters = ({ products, onChange, currency }: FiltersProps) => {
 
   return (
     <Flex {...styles.wrapper} aria-labelledby={'filters'}>
-      <Text {...styles.heading}>{t('Filters')}</Text>
-      {sizes && (
-        <Flex {...styles.singleFilterWrapper}>
-          <Text>{t('Sizes')}</Text>
-          <CheckboxFilter filters={sizes} onChange={handleChangeSizes} />
-        </Flex>
-      )}
-      {colors && (
-        <Flex {...styles.singleFilterWrapper}>
-          <Text>{t('Colors')}</Text>
-          <CheckboxFilter filters={colors} onChange={handleChangeColors} />
-        </Flex>
-      )}
-      {price && (
-        <Flex {...styles.singleFilterWrapper}>
-          <Text>{t('Price')}</Text>
-          <SliderFilter min={min} max={max} onChange={handleChangePrice} />
-        </Flex>
+      {isLoading ? (
+        <>
+          <SkeletonCircle size={'12'} />
+          <SkeletonCircle size={'12'} />
+          <SkeletonCircle size={'12'} />
+        </>
+      ) : (
+        <>
+          <Text {...styles.heading}>{t('Filters')}</Text>
+          {products?.filters?.sizes && (
+            <Flex {...styles.singleFilterWrapper}>
+              <Text>{t('Sizes')}</Text>
+              <CheckboxFilter filters={products?.filters?.sizes} onChange={handleChangeSizes} />
+            </Flex>
+          )}
+          {products?.filters?.colors && (
+            <Flex {...styles.singleFilterWrapper}>
+              <Text>{t('Colors')}</Text>
+              <CheckboxFilter filters={products?.filters?.colors} onChange={handleChangeColors} />
+            </Flex>
+          )}
+          {products?.filters?.price && (
+            <Flex {...styles.singleFilterWrapper}>
+              <Text>{t('Price')}</Text>
+              <SliderFilter min={min} max={max} onChange={handleChangePrice} />
+            </Flex>
+          )}
+        </>
       )}
     </Flex>
   );
