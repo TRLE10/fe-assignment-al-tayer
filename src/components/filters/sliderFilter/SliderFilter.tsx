@@ -18,7 +18,14 @@ const SliderFilter = ({ min, max, onChange }: SliderFilterProps) => {
   return (
     <Flex gap={4}>
       <Text>{min}</Text>
-      <RangeSlider defaultValue={[min, max / 2]} min={min} max={max} onChangeEnd={handleChange} step={5}>
+      <RangeSlider
+        defaultValue={[min, max / 2]}
+        min={min}
+        max={max}
+        onChangeEnd={handleChange}
+        step={5}
+        aria-label={[`${min}`, `${max}`]}
+      >
         <RangeSliderTrack>
           <RangeSliderFilledTrack />
         </RangeSliderTrack>

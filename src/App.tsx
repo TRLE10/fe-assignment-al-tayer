@@ -1,4 +1,5 @@
 import { ChakraProvider } from '@chakra-ui/react';
+import './i18n.ts';
 import Router from './routes/Router';
 import theme from './style/theme';
 import registerServiceWorker from './registerServiceWorker';

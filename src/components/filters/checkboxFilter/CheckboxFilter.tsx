@@ -1,4 +1,4 @@
-import { Center, Checkbox, Flex, Text } from '@chakra-ui/react';
+import { Checkbox, Flex, Text } from '@chakra-ui/react';
 import { ChangeEvent, useCallback, useEffect, useState } from 'react';
 
 type SizeFilterProps = {
@@ -26,13 +26,13 @@ const CheckboxFilter = ({ onChange, filters }: SizeFilterProps) => {
   }, []);
 
   return (
-    <Flex>
+    <Flex flexWrap={'wrap'} gap={4}>
       {filters.map((filter) => {
         return (
-          <Center key={filter} flexDir={'column'} mx={4} gap={1}>
-            <Checkbox name={filter} onChange={handleChange} />
+          <Flex key={filter} flexDir={'column'}>
+            <Checkbox name={filter} onChange={handleChange} aria-label={filter} />
             <Text>{filter}</Text>
-          </Center>
+          </Flex>
         );
       })}
     </Flex>

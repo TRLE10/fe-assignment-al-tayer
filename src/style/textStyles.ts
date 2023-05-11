@@ -17,4 +17,13 @@ export const textStyles = {
   'Large/Mobile/Regular': { fontStyle: 'normal', fontWeight: 400, fontSize: 'lg' },
   'Large/Mobile/SemiBold': { fontStyle: 'normal', fontWeight: 600, fontSize: 'lg' },
   'Large/Mobile/Bold': { fontStyle: 'normal', fontWeight: 700, fontSize: 'lg' },
+  'Medium/Desktop/Regular': { fontStyle: 'normal', fontWeight: 400, fontSize: 'md' },
+  'Medium/Desktop/SemiBold': { fontStyle: 'normal', fontWeight: 600, fontSize: 'md' },
+  'Medium/Desktop/Bold': { fontStyle: 'normal', fontWeight: 700, fontSize: 'md' },
+  'Medium/Tablet/Regular': { fontStyle: 'normal', fontWeight: 400, fontSize: 'md' },
+  'Medium/Tablet/SemiBold': { fontStyle: 'normal', fontWeight: 600, fontSize: 'md' },
+  'Medium/Tablet/Bold': { fontStyle: 'normal', fontWeight: 700, fontSize: 'md' },
+  'Medium/Mobile/Regular': { fontStyle: 'normal', fontWeight: 400, fontSize: 'md' },
+  'Medium/Mobile/SemiBold': { fontStyle: 'normal', fontWeight: 600, fontSize: 'md' },
+  'Medium/Mobile/Bold': { fontStyle: 'normal', fontWeight: 700, fontSize: 'md' },
 };

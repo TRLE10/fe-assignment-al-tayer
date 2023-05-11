@@ -6,7 +6,7 @@ const Button = {
   },
   sizes: {
     sm: {
-      minW: 24,
+      minW: 20,
       h: 7,
       px: 7,
       py: 3,

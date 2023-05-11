@@ -7,21 +7,35 @@ type ProductCardProps = {
   title: string;
   description: string;
   imgSrc: string;
+  currency: string;
+  price: number;
 };
 
-const ProductCard = ({ title, description, imgSrc }: ProductCardProps) => {
+const ProductCard = ({ title, description, imgSrc, price, currency }: ProductCardProps) => {
   const { t } = useTranslation();
+  const getSymbolForCurrency = (currency: string) => {
+    if (currency === 'EUR') {
+      return '€';
+    } else if (currency === 'USD') {
+      return '$';
+    } else {
+      return 'د.إ';
+    }
+  };
 
   return (
-    <Flex {...styles.wrapper}>
+    <Flex {...styles.wrapper} aria-labelledby={title}>
       <Center flex={1}>
         <Image src={imgSrc} boxSize={{ lg: '250px', md: '160px', sm: '120px' }} aspectRatio={'inherit'} />
       </Center>
       <Flex {...styles.infoWrapper}>
-        <Text textStyle={['Heading/Mobile/SemiBold', 'Heading/Tablet/SemiBold', 'Heading/Desktop/SemiBold']}>
-          {title}
+        <Text textStyle={['Large/Mobile/SemiBold', 'Large/Tablet/SemiBold', 'Large/Desktop/SemiBold']}>{title}</Text>
+        <Text textStyle={['Medium/Mobile/Regular', 'Medium/Tablet/Regular', 'Medium/Desktop/Regular']}>
+          {description}
         </Text>
-        <Text textStyle={['Large/Mobile/Regular', 'Large/Tablet/Regular', 'Large/Desktop/Regular']}>{description}</Text>
+        <Text
+          textStyle={['Large/Mobile/Regular', 'Large/Tablet/Regular', 'Large/Desktop/Regular']}
+        >{`${getSymbolForCurrency(currency)} ${price}`}</Text>
         <Button>{t('Buy Now')}</Button>
       </Flex>
     </Flex>

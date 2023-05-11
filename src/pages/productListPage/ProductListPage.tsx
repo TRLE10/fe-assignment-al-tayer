@@ -9,6 +9,7 @@ const ProductListPage = () => {
   const { products } = useProducts();
   const [filteredProducts, setFilteredProducts] = useState<ProductType[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [currency, setCurrency] = useState<string>('');
   const minProductToDisplay = useMemo(() => {
     if (products?.pagination) {
       const {
@@ -37,24 +38,34 @@ const ProductListPage = () => {
     setCurrentPage(changedPage);
   }, []);
 
+  const handleChangeCurrency = useCallback((currency: string) => {
+    setCurrency(currency);
+  }, []);
+
   return (
     <>
       <Flex {...styles.headerWrapper}>
-        <Header />
+        <Header onChangeCurrency={handleChangeCurrency} />
       </Flex>
       <Grid {...styles.gridLayout}>
         <GridItem {...styles.filtersWrapper}>
-          {products && <Filters products={products} onChange={handleChange} />}
+          {products && <Filters products={products} onChange={handleChange} currency={currency} />}
         </GridItem>
         <Box>
           {filteredProducts.length ? (
             <Grid {...styles.productsWrapper}>
               {filteredProducts.map((product, index) => {
-                const { id, name, description, img } = product;
+                const { id, name, description, img, price } = product;
                 if (index >= minProductToDisplay && index <= maxProductToDisplay) {
                   return (
                     <GridItem key={id} {...styles.productCardWrapper}>
-                      <ProductCard title={name} description={description} imgSrc={img} />
+                      <ProductCard
+                        title={name}
+                        description={description}
+                        imgSrc={img}
+                        price={price[currency]}
+                        currency={currency}
+                      />
                     </GridItem>
                   );
                 }
