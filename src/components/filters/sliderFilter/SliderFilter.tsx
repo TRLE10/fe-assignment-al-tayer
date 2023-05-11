@@ -2,8 +2,8 @@ import { Flex, RangeSlider, RangeSliderFilledTrack, RangeSliderThumb, RangeSlide
 import { useCallback } from 'react';
 
 type SliderFilterProps = {
-  min: number;
-  max: number;
+  min?: number;
+  max?: number;
   onChange?: (values: number[]) => void;
 };
 
@@ -19,7 +19,7 @@ const SliderFilter = ({ min, max, onChange }: SliderFilterProps) => {
     <Flex gap={4}>
       <Text>{min}</Text>
       <RangeSlider
-        defaultValue={[min, max / 2]}
+        defaultValue={[0, 100]}
         min={min}
         max={max}
         onChangeEnd={handleChange}

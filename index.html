@@ -4,6 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FE Assignment</title>
+
+    <!-- 'preload' hints download specified font files early, reducing load time and enhancing rendering. -->
+    <link rel="preload" href="https://bshc.b-cdn.net/fonts/Roboto-Regular.woff2" as="font" type="font/woff2"
+      crossOrigin="" />
+
+    <!-- These tags are used to establish an early connection with the resource.
+      The 'preconnect' hint opens a connection as soon as possible, while 'dns-prefetch' resolves the DNS ahead of time. Both techniques aim to optimize page load speed by reducing latency. -->
+    <link rel="preconnect" href="https://bshc.b-cdn.net/" />
+    <link rel="dns-prefetch" href="https://bshc.b-cdn.net/" />
+
+    <!-- When using third-party JavaScript, apply 'defer' and 'async' attributes to enhance asset loading and prevent DOM rendering blockages.  -->
+
     <style>
       #offline-message {
           display: none;

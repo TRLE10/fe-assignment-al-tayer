@@ -1,7 +1,10 @@
-import { Button, Center, Flex, Image, Text } from '@chakra-ui/react';
+import { Button, Center, Flex, Text } from '@chakra-ui/react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './styles';
+
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 type ProductCardProps = {
   title: string;
@@ -26,7 +29,7 @@ const ProductCard = ({ title, description, imgSrc, price, currency }: ProductCar
   return (
     <Flex {...styles.wrapper} aria-labelledby={title}>
       <Center flex={1}>
-        <Image src={imgSrc} boxSize={{ lg: '250px', md: '160px', sm: '120px' }} aspectRatio={'inherit'} />
+        <LazyLoadImage src={imgSrc} alt="Description of the image" width={200} height={200} effect="blur" />
       </Center>
       <Flex {...styles.infoWrapper}>
         <Text textStyle={['Large/Mobile/SemiBold', 'Large/Tablet/SemiBold', 'Large/Desktop/SemiBold']}>{title}</Text>
