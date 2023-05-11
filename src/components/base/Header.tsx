@@ -21,6 +21,11 @@ const Header = ({ onChangeCurrency }: HeaderProps) => {
 
   const handleChangeLocale = (locale: string) => {
     i18n.changeLanguage(locale);
+    if (locale === 'ar') {
+      setCurrency('AED');
+    } else if (locale === 'en') {
+      setCurrency('USD');
+    }
   };
 
   const handleChangeCurrency = useCallback((currency: string) => {
@@ -28,7 +33,7 @@ const Header = ({ onChangeCurrency }: HeaderProps) => {
   }, []);
 
   return (
-    <Flex aria-labelledby={'navigation'} w={'full'} justifyContent={'space-between'} px={4}>
+    <Flex {...styles.wrapper} aria-labelledby={'navigation'}>
       <Link to={routeConstants.HOME}>
         <Text {...styles.textStyle} borderBottom={'2px solid white'}>
           {t('Home')}

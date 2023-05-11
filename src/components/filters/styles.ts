@@ -2,17 +2,17 @@ import { ChakraProps } from '@chakra-ui/react';
 
 const wrapper: ChakraProps = {
   flexDir: 'column',
+  flex: 1,
   gap: 4,
-  px: [2, 8, 10],
-  pt: [2, 12],
-  pb: [2, 12, 12],
+  px: 10,
+  py: [4, 12, 12],
 };
 
 const singleFilterWrapper: ChakraProps = {
   flexDir: 'column',
   flexWrap: 'wrap',
   color: 'whiteAlpha.800',
-  gap: 4,
+  gap: 2,
   textStyle: ['Large/Mobile/Regular', 'Large/Tablet/Regular', 'Large/Desktop/Regular'],
 };
 

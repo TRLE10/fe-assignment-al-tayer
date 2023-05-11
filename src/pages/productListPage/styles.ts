@@ -14,8 +14,7 @@ const headerWrapper: GridItemProps = {
   bg: 'primary.600',
   boxShadow: '0 0 20px grey',
   w: 'full',
-  justifyContent: 'center',
-  p: 2,
+  py: 2,
 };
 
 const filtersWrapper: GridItemProps = {
@@ -40,6 +39,7 @@ const productCardWrapper: GridItemProps = {
 const paginationWrapper: GridItemProps = {
   rowSpan: 1,
   colSpan: { lg: 3, md: 2, sm: 1 },
+  pb: 10,
 };
 
 const footerWrapper: GridItemProps = {

@@ -29,10 +29,10 @@ const ProductCard = ({ title, description, imgSrc, price, currency }: ProductCar
         <Image src={imgSrc} boxSize={{ lg: '250px', md: '160px', sm: '120px' }} aspectRatio={'inherit'} />
       </Center>
       <Flex {...styles.infoWrapper}>
-        <Text textStyle={['Heading/Mobile/SemiBold', 'Heading/Tablet/SemiBold', 'Heading/Desktop/SemiBold']}>
-          {title}
+        <Text textStyle={['Large/Mobile/SemiBold', 'Large/Tablet/SemiBold', 'Large/Desktop/SemiBold']}>{title}</Text>
+        <Text textStyle={['Medium/Mobile/Regular', 'Medium/Tablet/Regular', 'Medium/Desktop/Regular']}>
+          {description}
         </Text>
-        <Text textStyle={['Large/Mobile/Regular', 'Large/Tablet/Regular', 'Large/Desktop/Regular']}>{description}</Text>
         <Text
           textStyle={['Large/Mobile/Regular', 'Large/Tablet/Regular', 'Large/Desktop/Regular']}
         >{`${getSymbolForCurrency(currency)} ${price}`}</Text>
