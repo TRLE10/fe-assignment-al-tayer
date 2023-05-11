@@ -7,6 +7,10 @@ const components = {
   Button,
 };
 
-const theme = extendTheme({ components, textStyles, colors });
+const fonts = {
+  body: `'Roboto-Regular'`,
+};
+
+const theme = extendTheme({ components, textStyles, colors, fonts });
 
 export default theme;

@@ -22,6 +22,7 @@ const filtersWrapper: GridItemProps = {
   colSpan: { lg: 1, md: 2, sm: 1 },
   bgGradient: 'linear(to-b, neutrals.500, neutrals.400)',
   boxShadow: '0 0 20px grey',
+  minW: '300px',
 };
 
 const productsWrapper: GridProps = {
